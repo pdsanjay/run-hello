@@ -3,7 +3,7 @@ from azureml.core import Workspace, Experiment, Environment, ScriptRunConfig
 
 ws = Workspace.from_config()
 experiment = Experiment(workspace=ws, name='day1-experiment-hello')
-
+# define config
 config = ScriptRunConfig(source_directory='./src', script='hello.py', compute_target='pdsanjay1')
 
 run = experiment.submit(config)
